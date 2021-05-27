@@ -2,11 +2,27 @@
 
 import random
 
+import os
+
+import dotenv
+
+dotenv.load_dotenv()
+
+PLAYER_NAME = os.getenv("PLAYER_NAME")
+
+
+#print(PLAYER_NAME)
+
+print("Welcome "+ PLAYER_NAME + ", to the game of games")
+
+print("-----------------------------")
 print("Rock, Paper, Scissors, Shoot!")
+print("-----------------------------")
 
 user_choice = input("Please choose one of 'rock', 'paper', 'scissors':")
 
 #print(user_choice)
+print("-----------------------------")
 print("USER CHOICE:", user_choice)
 
 # validate the input such that only if it is one of the expected values
@@ -19,10 +35,12 @@ if (user_choice == "rock") or (user_choice=="paper") or (user_choice=="scissors"
 else: 
     print("OOPS, INVALID INPUT. PLEASE TRY AGAIN")
     exit()
+print("-----------------------------")
 
 valid_options = ["rock","paper","scissors"]
 computer_choice = random.choice(valid_options)
 print("COMPUTER CHOICE:",computer_choice)
+print("-----------------------------")
 
 # determine the winner
 if user_choice == computer_choice:
@@ -34,4 +52,5 @@ elif (user_choice == "rock" and computer_choice == "paper") or (user_choice == "
 else:
     print("YOU WIN, COMPUTER LOSES!")
 
+print("-----------------------------")
 print("THIS IS THE END OF OUR GAME, PLEASE PLAY AGAIN")
