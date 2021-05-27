@@ -25,8 +25,12 @@ computer_choice = random.choice(valid_options)
 print("COMPUTER CHOICE:",computer_choice)
 
 # determine the winner
-if (user_choice == "rock" and computer_choice == "paper") or (user_choice == "paper" and computer_choice == "scissors") or (user_choice == "scissors" and computer_choice == "rock"):
+if user_choice == computer_choice:
+    print("ITS A TIE, NO ONE WINS")
+    
+elif (user_choice == "rock" and computer_choice == "paper") or (user_choice == "paper" and computer_choice == "scissors") or (user_choice == "scissors" and computer_choice == "rock"):
     print("COMPUTER WINS, YOU LOSE!")
+
 else:
     print("YOU WIN, COMPUTER LOSES!")
 
